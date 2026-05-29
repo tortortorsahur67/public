@@ -1,0 +1,97 @@
+<h2 class="sr-only">IP-plan for eksamenssett 3 – segmentert nettverk</h2>
+<div style="padding: 1rem 0; font-size: 14px; color: var(--color-text-primary);">
+  <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+    <thead>
+      <tr style="border-bottom: 0.5px solid var(--color-border-secondary);">
+        <th style="text-align:left; padding: 10px 8px; font-weight:500; color: var(--color-text-secondary); font-size:12px;">Segment / enhet</th>
+        <th style="text-align:left; padding: 10px 8px; font-weight:500; color: var(--color-text-secondary); font-size:12px;">Nett-adresse</th>
+        <th style="text-align:left; padding: 10px 8px; font-weight:500; color: var(--color-text-secondary); font-size:12px;">Subnettmaske</th>
+        <th style="text-align:left; padding: 10px 8px; font-weight:500; color: var(--color-text-secondary); font-size:12px;">Gateway</th>
+        <th style="text-align:left; padding: 10px 8px; font-weight:500; color: var(--color-text-secondary); font-size:12px;">IP-adresse (enhet)</th>
+        <th style="text-align:left; padding: 10px 8px; font-weight:500; color: var(--color-text-secondary); font-size:12px;">Kommentar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary);">
+        <td style="padding: 9px 8px; font-weight:500;">Internett (WAN)</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px;">ISP</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Offentlig IP</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Fra ISP</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+        <td style="padding: 9px 8px; font-weight:500;">Brannmur 1 (ytre)</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px;">ISP</td>
+        <td style="padding: 9px 8px;">203.0.113.1</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">WAN-grensesnitt</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary);">
+        <td style="padding: 9px 8px; font-weight:500;">DMZ</td>
+        <td style="padding: 9px 8px;">192.168.10.0</td>
+        <td style="padding: 9px 8px;">/24 (255.255.255.0)</td>
+        <td style="padding: 9px 8px;">192.168.10.1</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Offentlig sone</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+        <td style="padding: 9px 8px; font-weight:500;">Applikasjonsserver</td>
+        <td style="padding: 9px 8px;">192.168.10.0</td>
+        <td style="padding: 9px 8px;">/24</td>
+        <td style="padding: 9px 8px;">192.168.10.1</td>
+        <td style="padding: 9px 8px;">192.168.10.10</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">I DMZ</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary);">
+        <td style="padding: 9px 8px; font-weight:500;">Brannmur 2 (indre)</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px;">192.168.10.1 / 192.168.20.1</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">To grensesnitt</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+        <td style="padding: 9px 8px; font-weight:500;">Internt nett</td>
+        <td style="padding: 9px 8px;">192.168.20.0</td>
+        <td style="padding: 9px 8px;">/24 (255.255.255.0)</td>
+        <td style="padding: 9px 8px;">192.168.20.1</td>
+        <td style="padding: 9px 8px;">—</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Kun intern trafikk</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary);">
+        <td style="padding: 9px 8px; font-weight:500;">Databaseserver</td>
+        <td style="padding: 9px 8px;">192.168.20.0</td>
+        <td style="padding: 9px 8px;">/24</td>
+        <td style="padding: 9px 8px;">192.168.20.1</td>
+        <td style="padding: 9px 8px;">192.168.20.10</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Ikke tilgjengelig fra DMZ</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+        <td style="padding: 9px 8px; font-weight:500;">Klient 1</td>
+        <td style="padding: 9px 8px;">192.168.20.0</td>
+        <td style="padding: 9px 8px;">/24</td>
+        <td style="padding: 9px 8px;">192.168.20.1</td>
+        <td style="padding: 9px 8px;">192.168.20.101</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Lærling/elev PC</td>
+      </tr>
+      <tr style="border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary);">
+        <td style="padding: 9px 8px; font-weight:500;">Klient 2</td>
+        <td style="padding: 9px 8px;">192.168.20.0</td>
+        <td style="padding: 9px 8px;">/24</td>
+        <td style="padding: 9px 8px;">192.168.20.1</td>
+        <td style="padding: 9px 8px;">192.168.20.102</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Lærling/elev PC</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; font-weight:500;">Admin / klient 3</td>
+        <td style="padding: 9px 8px;">192.168.20.0</td>
+        <td style="padding: 9px 8px;">/24</td>
+        <td style="padding: 9px 8px;">192.168.20.1</td>
+        <td style="padding: 9px 8px;">192.168.20.200</td>
+        <td style="padding: 9px 8px; color: var(--color-text-secondary);">Administratormaskin</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

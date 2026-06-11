@@ -4,4 +4,4 @@ dette er en test
 
 tortortor sahur 
 
-mkmlm
+dagen før eksamen
